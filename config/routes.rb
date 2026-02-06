@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   devise_for :users   # ← これを追加
   root to: "messages#index"
   resources :users, only: [:edit, :update]
+  resources :rooms, only: [:new, :create]
   
 end
