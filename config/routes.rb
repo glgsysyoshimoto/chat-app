@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   # root "posts#index
 
   devise_for :users   # ← これを追加
-  root to: "messages#index"
+  # root to: "messages#index"
+  root to: "rooms#index"
   resources :users, only: [:edit, :update]
   resources :rooms, only: [:new, :create]
   
